@@ -23,6 +23,7 @@ public class ClassChanger : MonoBehaviour
         classes.Add("Mage");
         classes.Add("Rogue");
 
+
         tmp.SetText(classes[currentOption]);
         ChangeArmor();
     }

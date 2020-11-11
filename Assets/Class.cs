@@ -4,15 +4,7 @@ using UnityEngine;
 
 public class Class : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public enum CharacterClass { WARRIOR, MAGE, ROGUE };
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
