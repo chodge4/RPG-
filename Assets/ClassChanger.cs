@@ -6,12 +6,13 @@ using TMPro;
 public class ClassChanger : MonoBehaviour
 {
     List<string> classes = new List<string>();
-    string classType;
     public List<SpriteRenderer> armorParts = new List<SpriteRenderer>();
     
     public List<Sprite> warriorArmor = new List<Sprite>();
     public List<Sprite> mageArmor = new List<Sprite>();
     public List<Sprite> rogueArmor = new List<Sprite>();
+
+    public List<Sprite> currentArmor = new List<Sprite>();
 
     public TextMeshProUGUI tmp;
 
@@ -32,22 +33,28 @@ public class ClassChanger : MonoBehaviour
     public void ChangeArmor(){
         if(classes[currentOption] == "Warrior"){
             count = 0;
+            currentArmor.Clear();
             foreach(SpriteRenderer part in armorParts){
                 armorParts[count].sprite = warriorArmor[count];
+                currentArmor.Add(warriorArmor[count]);
                 count++;
             }
         }
         if(classes[currentOption] == "Mage"){
             count = 0;
+            currentArmor.Clear();
             foreach(SpriteRenderer part in armorParts){
                 armorParts[count].sprite = mageArmor[count];
+                currentArmor.Add(mageArmor[count]);
                 count++;
             }
         }
         if(classes[currentOption] == "Rogue"){
             count = 0;
+            currentArmor.Clear();
             foreach(SpriteRenderer part in armorParts){
                 armorParts[count].sprite = rogueArmor[count];
+                currentArmor.Add(rogueArmor[count]);
                 count++;
             }
         }

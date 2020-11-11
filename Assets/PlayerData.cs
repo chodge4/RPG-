@@ -14,7 +14,9 @@ public class PlayerData{
     public int intelligence;
     public int agility;
 
-    public PlayerData (Player player){
+    public List<Sprite> armor = new List<Sprite>();
+
+    public PlayerData (Player player, ClassChanger charClass, ){
         
         charName = player.charName;
         level = player.level;
@@ -23,6 +25,10 @@ public class PlayerData{
         strength = player.strength;
         intelligence = player.intelligence;
         agility = player.agility;
+
+        armor = charClass.currentArmor;
+
+
     }
     
 }
